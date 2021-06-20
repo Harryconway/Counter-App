@@ -1,0 +1,18 @@
+* {
+  background-color: floralwhite;
+}
+div,
+span {
+  display: grid;
+  justify-content: center;
+  padding-top: 10%;
+}
+span {
+  font-size: 62px;
+}
+#num,
+#add,
+#sub,
+#reset {
+  margin: 10px;
+}
