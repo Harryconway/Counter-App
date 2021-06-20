@@ -1,7 +1,7 @@
 * {
   background-color: floralwhite;
 }
-div,
+#buttons,
 span {
   display: grid;
   justify-content: center;
@@ -10,9 +10,10 @@ span {
 span {
   font-size: 62px;
 }
-#num,
-#add,
-#sub,
-#reset {
+.num,
+.add,
+.sub,
+.reset {
   margin: 10px;
 }
+
