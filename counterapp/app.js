@@ -1,18 +1,28 @@
 let num = document.getElementById('num');
-let add = document.getElementById('add');
-let sub = document.getElementById('sub');
-let reset = document.getElementById('reset');
 
+let buttons = document.getElementById('buttons');
 
-
-add.addEventListener('click', () => {
-    num.innerHTML++;
+buttons.addEventListener('click', (e) => {
+    if (e.target.classList.contains("add")) {
+        num.innerHTML++;
+        setColor()
+    }
+    if (e.target.classList.contains('sub')) {
+        num.innerHTML--;
+        setColor()
+    }
+    if (e.target.classList.contains('reset')) {
+        num.innerHTML = 0;
+        setColor()
+    }
 })
 
-sub.addEventListener('click', () => {
-    num.innerHTML--;
-})
-
-reset.addEventListener('click', () => {
-    num.innerHTML = 0;
-})
+function setColor() {
+    if (num.innerHTML > 0) {
+        num.style.color = 'green';
+    } else if (num.innerHTML < 0) {
+        num.style.color = 'red';
+    } else {
+        num.style.color = 'black'
+    }
+}
